@@ -1,9 +1,19 @@
 import 'package:angular/angular.dart';
+import 'package:angular_app/hero_component.dart';
+import 'package:angular_app/src/hero.dart';
+import 'package:angular_app/src/mock_heroes.dart';
+
 
 @Component(
   selector: 'my-app',
-  template: '<h1>Hello {{name}}</h1>',
+  templateUrl: 'app_component.html',
+  directives: [coreDirectives, HeroComponent],
+  styleUrls: ['app_component.css'],
 )
 class AppComponent {
-  var name = 'Angular';
+  var title = 'Tour of Heroes';
+  List<Hero> heroes = mockHeroes;
+  Hero selected;
+
+  void onSelected(Hero hero) => selected = hero;
 }
