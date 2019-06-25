@@ -1,4 +1,4 @@
-.dart_tool/pub/bin/sdk-version
+.dart_tool/
 .packages
 pubspec.lock
 .dart_tool/pub/bin/build_runner/build_runner.dart.snapshot.dart2
